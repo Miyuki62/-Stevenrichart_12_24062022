@@ -1,0 +1,8 @@
+.profile {
+	padding: 20px;
+	max-width: 800px;
+	margin: 0 auto;
+	@include huge {
+		max-width: 1807px;
+	}
+}
