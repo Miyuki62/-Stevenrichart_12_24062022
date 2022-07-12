@@ -20,7 +20,7 @@ export const getActivityByUserId = async (id) => {
 			);
 			return response.data;
 		} catch (e) {
-			alert("Erreur : Le chargement des données a échoué.");
+			alert("Erreur : Le chargement des données d'activité a échoué.");
 		}
 	}
 };

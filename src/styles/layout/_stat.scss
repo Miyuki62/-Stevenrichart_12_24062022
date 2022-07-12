@@ -1,0 +1,134 @@
+.statContainer {
+	display: flex;
+	gap: 10px;
+	margin-top: 40px;
+
+	@include huge {
+		gap: 30px;
+	}
+}
+
+.keyDataContainer {
+	width: 30%;
+}
+
+.charts {
+	display: flex;
+	justify-content: space-between;
+}
+
+.activity {
+	width: 620px;
+	height: 250px;
+	position: relative;
+	margin-bottom: 30px;
+	background-color: #fbfbfb;
+	border-radius: 5px;
+
+	@include huge {
+		width: 835px;
+		height: 320px;
+	}
+
+	&__title {
+		position: absolute;
+		top: 5px;
+		left: 30px;
+
+		font: bold;
+	}
+
+	.custom-tooltip {
+		background-color: #ff0000;
+		color: white;
+		padding: 10px;
+		font-size: 8px;
+	}
+}
+
+.performance,
+.score,
+.averageSessions {
+	height: 200px;
+	width: 200px;
+
+	@include huge {
+		width: 250px;
+		height: 250px;
+	}
+}
+
+.performance {
+	background-color: #282d30;
+	border-radius: 5px;
+
+	.recharts-polar-angle-axis-tick-value {
+		font-size: 12px;
+		fill: white;
+	}
+}
+
+.averageSessions {
+	background-color: #ff0000;
+	border-radius: 5px;
+	position: relative;
+
+	.custom-tooltip {
+		background-color: white;
+		padding: 7px;
+
+		.label {
+			margin: 0;
+		}
+	}
+
+	&__title {
+		position: absolute;
+		top: 10px;
+		left: 30px;
+		color: white;
+		max-width: 150px;
+		opacity: 0.5;
+
+		font: bold;
+	}
+
+	.recharts-cartesian-axis-tick-value {
+		fill: white;
+		font-size: 12px;
+	}
+}
+
+.score {
+	background-color: #fbfbfb;
+	border-radius: 5px;
+	position: relative;
+
+	&__title {
+		position: absolute;
+		top: 10px;
+		left: 30px;
+
+		font: bold;
+	}
+
+	&__content {
+		max-width: 60px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		margin: 0;
+
+		.strong {
+			font-size: 2rem;
+			font: bold;
+		}
+	}
+
+	.recharts-sector {
+		stroke-linejoin: round;
+		stroke-width: 7px;
+	}
+}

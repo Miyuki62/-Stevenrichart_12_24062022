@@ -1,4 +1,5 @@
-import { getUserById } from "../services/Userservice";
+import { getUserById } from "../services/UserService";
+import { USER_ID } from "../assets/data/id";
 import Clap from "../assets/Imgs/clap.png";
 import calorie from "../assets/icons/calorie.svg";
 import carbohydrate from "../assets/icons/carbohydrate.svg";
@@ -7,12 +8,14 @@ import protein from "../assets/icons/protein.svg";
 import React, { useEffect, useState } from "react";
 import KeyData from "../components/keyData";
 import Score from "../components/graphs/Score";
+import Performance from "../components/graphs/Performance";
+import AverageSessions from "../components/graphs/AverageSessions";
 
 const Profile = () => {
 	const [user, setuser] = useState({});
 
 	useEffect(() => {
-		getUserById(12).then(function (response) {
+		getUserById(USER_ID[0].CLIENT_ID).then(function (response) {
 			setuser(response.data);
 		});
 	}, []);
@@ -40,8 +43,8 @@ const Profile = () => {
 				<div>
 					{/* activité */}
 					<div className="charts">
-						{/* perf */}
-						{/* average */}
+						<Performance />
+						<AverageSessions />
 						<Score todayScore={user.todayScore || null} />
 					</div>
 					{user.keyData && (
