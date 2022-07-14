@@ -3,8 +3,8 @@ import propTypes from "prop-types";
 
 function Icon(props) {
 	let iconclassName = "icon ";
-	iconclassName += "icon__bg-" + props.backgroundColor;
-	iconclassName += " icon__type-" + props.icontype;
+	iconclassName += "icon__bg-" + props.backgroundColor; //add the backgroundColor class
+	iconclassName += " icon__type-" + props.icontype; //add the icon type class
 	return (
 		<div className={iconclassName}>
 			<img src={props.img} alt={props.alt} />

@@ -2,7 +2,7 @@ import { USER_MAIN_DATA } from "../assets/data/Mockdata";
 import axios from "axios";
 
 /**
- * Fetch user activity from the API
+ * Fetch user informations from the API
  * @param { number } id User id
  * @returns { Promise } A promise containing the informations of the user
  */
