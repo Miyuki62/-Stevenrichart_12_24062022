@@ -10,7 +10,7 @@ import {
 	YAxis,
 } from "recharts";
 import { useEffect, useState } from "react";
-import ActivityCustomTooltip from "../customTooltips/ActivityCustomTooltip";
+import CustomTooltipActivity from "./tooltip/CustomTooltipActivity";
 import { USER_ID } from "../../assets/data/id";
 
 const Activity = () => {
@@ -69,7 +69,7 @@ const Activity = () => {
 							tickLine={false}
 						/>
 						<YAxis yAxisId="right" dataKey="calories" hide={true} />
-						<Tooltip content={<ActivityCustomTooltip />} />
+						<Tooltip content={<CustomTooltipActivity />} />
 						<Legend
 							verticalAlign="top"
 							height={36}

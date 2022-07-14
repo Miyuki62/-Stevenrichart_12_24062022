@@ -10,6 +10,7 @@ import KeyData from "../components/keyData";
 import Score from "../components/graphs/Score";
 import Performance from "../components/graphs/Performance";
 import AverageSessions from "../components/graphs/AverageSessions";
+import Activity from "../components/graphs/Activity";
 
 const Profile = () => {
 	const [user, setuser] = useState({});
@@ -41,45 +42,49 @@ const Profile = () => {
 			</div>
 			<div className="statContainer">
 				<div>
-					{/* activité */}
+					<Activity />
 					<div className="charts">
-						<Performance />
 						<AverageSessions />
+						<Performance />
 						<Score todayScore={user.todayScore || null} />
 					</div>
-					{user.keyData && (
-						<div className="keyDataContainer">
-							<KeyData
-								element="Calories"
-								count={user.keyData.calorieCount + "kCal"}
-								img={calorie}
-								backgroundColor="bg-red"
-								alt="Calorie"
-							/>
-							<KeyData
-								element="Protéines"
-								count={user.keyData.proteinCount + "g"}
-								img={protein}
-								backgroundColor="bg-blue"
-								alt="Protéines"
-							/>
-							<KeyData
-								element="Glucides"
-								count={user.keyData.carbohydrateCount + "g"}
-								img={carbohydrate}
-								backgroundColor="bg-yellow"
-								alt="Glucides"
-							/>
-							<KeyData
-								element="Lipides"
-								count={user.keyData.lipidCount + "g"}
-								img={lipid}
-								backgroundColor="bg-pink"
-								alt="Lipides"
-							/>
-						</div>
-					)}
 				</div>
+				{user.keyData && (
+					<div className="keyDataContainer">
+						<KeyData
+							element="Calories"
+							count={user.keyData.calorieCount + "kCal"}
+							img={calorie}
+							backgroundColor="red"
+							alt="Calorie"
+							icontype="keydata"
+						/>
+						<KeyData
+							element="Protéines"
+							count={user.keyData.proteinCount + "g"}
+							img={protein}
+							backgroundColor="blue"
+							alt="Protéines"
+							icontype="keydata"
+						/>
+						<KeyData
+							element="Glucides"
+							count={user.keyData.carbohydrateCount + "g"}
+							img={carbohydrate}
+							backgroundColor="yellow"
+							alt="Glucides"
+							icontype="keydata"
+						/>
+						<KeyData
+							element="Lipides"
+							count={user.keyData.lipidCount + "g"}
+							img={lipid}
+							backgroundColor="pink"
+							alt="Lipides"
+							icontype="keydata"
+						/>
+					</div>
+				)}
 			</div>
 		</div>
 	);

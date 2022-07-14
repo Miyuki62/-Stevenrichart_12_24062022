@@ -8,10 +8,30 @@ function Verticalmenu() {
 	return (
 		<nav className="Verticalmenu">
 			<div className="Verticalmenu__icon">
-				<Icon img={Yoga} alt="Yoga" backgroundColor="white" />
-				<Icon img={Swimming} alt="Natation" backgroundColor="white" />
-				<Icon img={Bike} alt="Vélo" backgroundColor="white" />
-				<Icon img={Fitness} alt="Fitness" backgroundColor="white" />
+				<Icon
+					img={Yoga}
+					alt="Yoga"
+					backgroundColor="white"
+					icontype="vertical"
+				/>
+				<Icon
+					img={Swimming}
+					alt="Natation"
+					backgroundColor="white"
+					icontype="vertical"
+				/>
+				<Icon
+					img={Bike}
+					alt="Vélo"
+					backgroundColor="white"
+					icontype="vertical"
+				/>
+				<Icon
+					img={Fitness}
+					alt="Fitness"
+					backgroundColor="white"
+					icontype="vertical"
+				/>
 			</div>
 			<p className="Verticalmenu__copyright">Copyright, SportSee 2020</p>
 		</nav>

@@ -4,19 +4,24 @@
 	justify-content: center;
 	width: 64px;
 	height: 64px;
-	&__white {
+	&__bg-white {
 		background: #ffffff;
 	}
-	&__red {
-		background: #ff0000;
+	&__bg-red {
+		background: rgb(255, 0, 0, 0.1);
 	}
-	&__blue {
-		background: #4ab8ff;
+	&__bg-blue {
+		background: rgba(74, 184, 255, 0.1);
 	}
-	&__yellow {
-		background: #f9ce23;
+	&__bg-yellow {
+		background: rgba(249, 206, 35, 0.1);
 	}
-	&__pink {
-		background: #fd5181;
+	&__bg-pink {
+		background: rgba(253, 81, 129, 0.1);
+	}
+	&__type-keydata > img {
+		height: 20px;
+		width: 20px;
+		align-self: center;
 	}
 }
